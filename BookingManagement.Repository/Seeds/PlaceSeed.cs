@@ -21,7 +21,8 @@ namespace BookingManagement.Repository.Seeds
                 Adress = "DummyAdress",
                 Status = true,
                 Capacity = 150,
-                Category = "Vine House"
+                Category = "Vine House",
+                CreatedDate = DateTime.Now,
             }, 
             new Place
             {
@@ -30,7 +31,8 @@ namespace BookingManagement.Repository.Seeds
                 Adress = "DummyAdress",
                 Status = true,
                 Capacity = 130,
-                Category = "Fine Dine"
+                Category = "Fine Dine",
+                CreatedDate = DateTime.Now,
             },
             new Place
             {
@@ -39,7 +41,8 @@ namespace BookingManagement.Repository.Seeds
                 Adress = "DummyAdress",
                 Status = true,
                 Capacity = 200,
-                Category = "Grill House"
+                Category = "Grill House",
+                CreatedDate = DateTime.Now,
             }
             );
         }

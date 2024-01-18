@@ -21,6 +21,7 @@ namespace BookingManagement.Repository.Seeds
                     Surname = "Test",
                     Gender = "Kadın",
                     TelNumber = 21211222,
+                    CreatedDate = DateTime.Now,
 
                 },
                 new User
@@ -30,7 +31,7 @@ namespace BookingManagement.Repository.Seeds
                     Surname = "Test1",
                     Gender = "Kadın",
                     TelNumber = 21211222,
-
+                    CreatedDate = DateTime.Now,
                 },
                 new User
                 {
@@ -39,6 +40,7 @@ namespace BookingManagement.Repository.Seeds
                     Surname = "Test2",
                     Gender = "Erkek",
                     TelNumber = 21211222,
+                    CreatedDate = DateTime.Now,
 
                 }, 
                 new User
@@ -48,6 +50,7 @@ namespace BookingManagement.Repository.Seeds
                     Surname = "Test3",
                     Gender = "Erkek",
                     TelNumber = 21211222,
+                    CreatedDate = DateTime.Now,
                 }
                 );
         }
