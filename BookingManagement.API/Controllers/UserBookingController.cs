@@ -2,6 +2,7 @@
 using BookingManagement.Core.DTOs;
 using BookingManagement.Core.Models;
 using BookingManagement.Core.Services;
+using BookingManagement.Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +13,18 @@ namespace BookingManagement.API.Controllers
     public class UserBookingController : CustomBaseController
     {
         private readonly IMapper _mapper;
-        private readonly IService<UserBooking> _service;
-        public UserBookingController(IService<UserBooking> service, IMapper mapper)
+        private readonly IUserBookingService _service;
+        public UserBookingController(IService<UserBooking> service, IMapper mapper, IUserBookingService userBookingService)
         {
-            _service = service;
+          
             _mapper = mapper;
+            _service = userBookingService;   
         }
 
-        [HttpGet("GetUserBookingWithPlace")]
-        public Task<IActionResult> GetUserBookingWithPlace()
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetUserBookingsWithPlace()
         {
-
+            return CreateActionResult(await _service.GetUserBookingsWithPlace());
         }
 
 

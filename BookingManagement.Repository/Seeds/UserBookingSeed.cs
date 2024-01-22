@@ -15,36 +15,30 @@ namespace BookingManagement.Repository.Seeds
         {
             builder.HasData(new UserBooking
             {
-                Name="a",
                 Id = 1,
                 UserId = 1,
                 PlaceId = 1,
-                CreatedDate = DateTime.Now,
             },
             new UserBooking
             {
-                Name = "a",
                 Id = 2,
                 UserId = 2,
                 PlaceId = 2,
-                CreatedDate = DateTime.Now,
+  
             },
             new UserBooking
             {
-
-                Name = "a",
                 Id = 3,
                 UserId = 3,
                 PlaceId = 1,
-                CreatedDate = DateTime.Now,
+
             },
             new UserBooking
             {
-                Name = "a",
                 Id = 4,
                 UserId = 4,
                 PlaceId = 3,
-                CreatedDate = DateTime.Now,
+
             }
             );
         }

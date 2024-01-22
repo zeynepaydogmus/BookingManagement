@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace BookingManagement.Core.DTOs
 {
-    public class UserBookingDto:BaseDto
+    public class UserBookingDto
     {
+        public int Id { get; set; }
+        
         public int UserId { get; set; }
         public int PlaceId { get; set; }
     }

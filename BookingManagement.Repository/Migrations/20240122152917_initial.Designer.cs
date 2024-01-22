@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookingManagement.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240117145710_initial")]
+    [Migration("20240122152917_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,7 +68,7 @@ namespace BookingManagement.Repository.Migrations
                             Adress = "DummyAdress",
                             Capacity = 150,
                             Category = "Vine House",
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2287),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(507),
                             Name = "DummyName",
                             Status = true,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -79,7 +79,7 @@ namespace BookingManagement.Repository.Migrations
                             Adress = "DummyAdress",
                             Capacity = 130,
                             Category = "Fine Dine",
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2298),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(519),
                             Name = "DummyName",
                             Status = true,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -90,7 +90,7 @@ namespace BookingManagement.Repository.Migrations
                             Adress = "DummyAdress",
                             Capacity = 200,
                             Category = "Grill House",
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2299),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(521),
                             Name = "DummyName",
                             Status = true,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -136,7 +136,7 @@ namespace BookingManagement.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2546),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(809),
                             Gender = "Kadın",
                             Name = "Test",
                             Surname = "Test",
@@ -146,7 +146,7 @@ namespace BookingManagement.Repository.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2547),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(811),
                             Gender = "Kadın",
                             Name = "Test1",
                             Surname = "Test1",
@@ -156,7 +156,7 @@ namespace BookingManagement.Repository.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2548),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(812),
                             Gender = "Erkek",
                             Name = "Test2",
                             Surname = "Test2",
@@ -166,7 +166,7 @@ namespace BookingManagement.Repository.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2549),
+                            CreatedDate = new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(812),
                             Gender = "Erkek",
                             Name = "Test3",
                             Surname = "Test3",
@@ -183,18 +183,8 @@ namespace BookingManagement.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("PlaceId")
                         .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -211,37 +201,25 @@ namespace BookingManagement.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2458),
-                            Name = "a",
                             PlaceId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2459),
-                            Name = "a",
                             PlaceId = 2,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 2
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2460),
-                            Name = "a",
                             PlaceId = 1,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 3
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2461),
-                            Name = "a",
                             PlaceId = 3,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UserId = 4
                         });
                 });

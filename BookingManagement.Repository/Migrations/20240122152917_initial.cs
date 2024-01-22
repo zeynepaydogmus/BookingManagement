@@ -53,10 +53,7 @@ namespace BookingManagement.Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    PlaceId = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    PlaceId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -80,9 +77,9 @@ namespace BookingManagement.Repository.Migrations
                 columns: new[] { "Id", "Adress", "Capacity", "Category", "CreatedDate", "Name", "Status", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { 1, "DummyAdress", 150, "Vine House", new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2287), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, "DummyAdress", 130, "Fine Dine", new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2298), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, "DummyAdress", 200, "Grill House", new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2299), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, "DummyAdress", 150, "Vine House", new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(507), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "DummyAdress", 130, "Fine Dine", new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(519), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, "DummyAdress", 200, "Grill House", new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(521), "DummyName", true, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
@@ -90,21 +87,21 @@ namespace BookingManagement.Repository.Migrations
                 columns: new[] { "Id", "CreatedDate", "Gender", "Name", "Surname", "TelNumber", "UpdatedDate" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2546), "Kadın", "Test", "Test", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2547), "Kadın", "Test1", "Test1", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2548), "Erkek", "Test2", "Test2", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2549), "Erkek", "Test3", "Test3", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(809), "Kadın", "Test", "Test", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(811), "Kadın", "Test1", "Test1", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(812), "Erkek", "Test2", "Test2", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, new DateTime(2024, 1, 22, 18, 29, 16, 959, DateTimeKind.Local).AddTicks(812), "Erkek", "Test3", "Test3", 21211222, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
                 table: "UserBooking",
-                columns: new[] { "Id", "CreatedDate", "Name", "PlaceId", "UpdatedDate", "UserId" },
+                columns: new[] { "Id", "PlaceId", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2458), "a", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1 },
-                    { 2, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2459), "a", 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2 },
-                    { 3, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2460), "a", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3 },
-                    { 4, new DateTime(2024, 1, 17, 17, 57, 10, 366, DateTimeKind.Local).AddTicks(2461), "a", 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 4 }
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 1, 3 },
+                    { 4, 3, 4 }
                 });
 
             migrationBuilder.CreateIndex(

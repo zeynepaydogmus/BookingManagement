@@ -15,7 +15,8 @@ namespace BookingManagement.Service.Mapping
         {
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<Place , PlaceDto>().ReverseMap();
-            CreateMap<UserBooking, UserBookingDto>().ReverseMap();  
+            CreateMap<UserBooking, UserBookingDto>().ReverseMap();
+            CreateMap<UserBooking, UserBookingWithPlaceDto>();
         }
     }
 }

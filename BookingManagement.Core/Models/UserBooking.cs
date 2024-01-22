@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookingManagement.Core.Models
 {
-    public class UserBooking : BaseEntity
+    public class UserBooking
     {
+        public int Id { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
 
