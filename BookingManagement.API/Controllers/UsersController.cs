@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookingManagement.API.Filters;
 using BookingManagement.Core.DTOs;
 using BookingManagement.Core.Models;
 using BookingManagement.Core.Services;
@@ -26,6 +27,7 @@ namespace BookingManagement.API.Controllers
             var usersDtos = _mapper.Map<List<UserDto>>(users.ToList());
             return CreateActionResult(CustomResponseDto<List<UserDto>>.Success(200, usersDtos));
         }
+        [ServiceFilter(typeof(NotFoundFilter<User>))]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

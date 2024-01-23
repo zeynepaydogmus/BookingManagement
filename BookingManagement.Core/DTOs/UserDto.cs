@@ -10,6 +10,6 @@ namespace BookingManagement.Core.DTOs
     {
         public string Surname { get; set; }
         public string Gender { get; set; }
-        public int TelNumber { get; set; }
+        public string TelNumber { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using BookingManagement.Core.Services;
 using BookingManagement.Core.UnitOfWorks;
 using BookingManagement.Repository.Repositories;
+using BookingManagement.Service.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,13 @@ namespace BookingManagement.Service.Services
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _repository.GetByIdAsync(id);
+            var hasData = await _repository.GetByIdAsync(id);
+            if (hasData == null)
+            {
+                throw new NotFoundException($"{typeof(T).Name} ({id}) not found");
+
+            }
+            return hasData;
         }
 
         public async Task UpdateAsync(T entity)
