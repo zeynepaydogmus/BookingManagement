@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagement.Core", "BookingManagement.Core\BookingManagement.Core.csproj", "{E287B6D1-1999-4BA4-A787-681B4D275C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingManagement.Core", "BookingManagement.Core\BookingManagement.Core.csproj", "{E287B6D1-1999-4BA4-A787-681B4D275C86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagement.Repository", "BookingManagement.Repository\BookingManagement.Repository.csproj", "{86A100DD-31FC-48DA-BD4E-2B2EBDCE9267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingManagement.Repository", "BookingManagement.Repository\BookingManagement.Repository.csproj", "{86A100DD-31FC-48DA-BD4E-2B2EBDCE9267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagement.Service", "BookingManagement.Service\BookingManagement.Service.csproj", "{1763A31D-E6BA-4B83-B686-A501085BD1CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingManagement.Service", "BookingManagement.Service\BookingManagement.Service.csproj", "{1763A31D-E6BA-4B83-B686-A501085BD1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagement.API", "BookingManagement.API\BookingManagement.API.csproj", "{E26E633F-977E-4FBF-A620-6D823BBA4542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingManagement.API", "BookingManagement.API\BookingManagement.API.csproj", "{E26E633F-977E-4FBF-A620-6D823BBA4542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingManagement.Caching", "BookingManagement.Caching\BookingManagement.Caching.csproj", "{53B7DC51-BACE-4346-8F76-96293BDB3083}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E26E633F-977E-4FBF-A620-6D823BBA4542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E26E633F-977E-4FBF-A620-6D823BBA4542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E26E633F-977E-4FBF-A620-6D823BBA4542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B7DC51-BACE-4346-8F76-96293BDB3083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B7DC51-BACE-4346-8F76-96293BDB3083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B7DC51-BACE-4346-8F76-96293BDB3083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B7DC51-BACE-4346-8F76-96293BDB3083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

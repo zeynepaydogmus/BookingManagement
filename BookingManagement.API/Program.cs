@@ -1,5 +1,8 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using BookingManagement.API.Filters;
 using BookingManagement.API.Middleware;
+using BookingManagement.API.Modules;
 using BookingManagement.Core.Repositories;
 using BookingManagement.Core.Services;
 using BookingManagement.Core.UnitOfWorks;
@@ -31,12 +34,8 @@ builder.Services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsF
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMemoryCache();
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
-builder.Services.AddScoped<IUserBookingRepository, UserBookingRepository>();
-builder.Services.AddScoped<IUserBookingService, UserBookingService>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), option =>
 {
@@ -45,6 +44,9 @@ builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configur
         .GetAssembly(typeof(AppDbContext))
         .GetName().Name);
 }));
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
 var app = builder.Build();
 

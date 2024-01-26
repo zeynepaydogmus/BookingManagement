@@ -14,7 +14,7 @@ namespace BookingManagement.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IUserBookingService _service;
-        public UserBookingController(IService<UserBooking> service, IMapper mapper, IUserBookingService userBookingService)
+        public UserBookingController( IMapper mapper, IUserBookingService userBookingService)
         {
           
             _mapper = mapper;

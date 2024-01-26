@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace BookingManagement.Service.Services
 {
-    public class UserBookingService : Service<UserBooking>, IUserBookingService
+    public class UserBookingServiceWithNoCaching : Service<UserBooking>, IUserBookingService
     {
         private readonly IUserBookingRepository _userBookingRepository;
         private readonly IMapper   _mapper;
-        public UserBookingService(IGenericRepository<UserBooking> repository, IUnitOfWork unitOfWork, IUserBookingRepository userBookingRepository, IMapper mapper) : base(repository, unitOfWork)
+        public UserBookingServiceWithNoCaching(IGenericRepository<UserBooking> repository, IUnitOfWork unitOfWork, IUserBookingRepository userBookingRepository, IMapper mapper) : base(repository, unitOfWork)
         {
             _mapper = mapper;
             _userBookingRepository = userBookingRepository;
